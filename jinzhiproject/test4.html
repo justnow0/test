@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .alink {
+            display: -webkit-flex;
+            display: flex;
+            margin-top:15px;
+            padding-bottom:15px;
+            border-bottom:.5px solid #f5f5f5;
+
+        }
+        * {
+            box-sizing:border-box;
+        }
+        a {
+            text-decoration: none;
+            color:inherit;
+        }
+        .alink .article {
+            -webkit-box-flex: 1;
+            flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+        .alink .article .article-title{
+            font-family: PingFangSC-Medium;
+            display: block;
+            -webkit-box-flex: 1;
+            flex: 1;
+            overflow: hidden;
+            line-height: 21px;
+            font-size: 15px;
+            color: #27292e;
+        }
+        .alink .article .article-marke {
+            margin: 0;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #9da0a5;
+        }
+        p {
+            padding: 0;
+        }
+        p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .alink .article-picture {
+            width: 110px;
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+    <a href="test.html" class="alink">
+        <div class="article">
+            <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+            <p class="article-marke">
+                <span>创新公司</span>
+                <span>1 小时</span>
+            </p>
+        </div>
+        <div class="article-picture">
+            <img src="article.jpg" alt="" width="110px" height="90px">
+        </div>
+    </a>
+    
+
+</body>
+</html>
