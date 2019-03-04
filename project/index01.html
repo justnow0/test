@@ -1,6 +1,50 @@
 <!doctype html>
 <html class="no-js">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>尽智研究院</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="./assets/aui/css/api.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/aui/css/aui.2.0.css" />
+
+
+
+
+
+
   <style>
         .my-index-homepicture {padding:0px 0px 20px 0px}
         .my-am-header {background-color: white;bottom: none}
@@ -9,8 +53,8 @@
         body {
                   background-color: white;
                   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-          }
-        .trade-express {
+        }
+        .my-trade-express {
                 width: 96%;
                 height: 54x;
                 margin-left: 2%;
@@ -122,7 +166,7 @@
 </head>
 <body>
 
-
+<div id="tbodyCenter">
     <div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{&quot;directionNav&quot;:false}' >
         <ul class="am-slides">
             <li>
@@ -142,6 +186,7 @@
             </li>
         </ul>
     </div>
+    
 
   <!--white-space:nowrap强制换行-->
   <div class="am-g" style="margin-top:15px;white-space:nowrap;margin-bottom: 15px">
@@ -164,7 +209,7 @@
 
 
   </div>
-  <div class="trade-express"> 
+  <div class="my-trade-express"> 
     <span style="font-size:16px;color:#9da0a5 ">test</span>
   </div>
 
@@ -284,14 +329,108 @@
                                           <div class="article-picture">
                                             <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
                                           </div>
-                                      </a>                
+                                      </a>
+                                      
           </li>
   
   </ul>
   </div>
+</div>
+
+        <footer class="aui-bar aui-bar-tab"  id="footer" style="border-top: 1px solid #dbdbdb; position:fixed;bottom:0;z-index:999">
+                <ul id="parent">
+                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                        <img src="./assets/picture/home_active.png" style="width: 25px;padding-top: 5px;" />
+                        <p class="touchfont">
+                            首页
+                        </p>
+                    </li>
+                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                        <img src="./assets/picture/shoucang.png" style="width: 25px;padding-top: 5px;" />
+                        <p>
+                            精选
+                        </p>
+                    </li>
+                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                        <img src="./assets/picture/my.png" style="width: 25px;padding-top: 5px;" />
+                        <p>
+                            我的
+                        </p>
+                    </li>
+                </ul>
+          
+          
+            </footer>
+
+<script src="./assets/js/amazeui.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
 
 
+<script type="text/javascript" src="./assets/aui/script/api.js"></script>
+<script type="text/javascript" src="./assets/js/jquery.min.js" ></script>
+<script type="text/javascript">
 
+    
+    var listfont=document.getElementById("parent").getElementsByTagName("p");
+    var listimg=document.getElementById("parent").getElementsByTagName("img");
+    var listli=document.getElementById("parent").children;
+
+
+    for(var i=0;i<listli.length;i++)
+    {
+        listli[i].index=i;
+        listli[i].onclick=function(i)
+        {
+            initimg();//初始化img
+            initfont(listli.length);//初始化font
+            switchImg(this.index);//改变图片
+            listfont[this.index].className="touchfont";//改变font
+            panduan(this.index);
+        };
+    };
+    
+    function initimg(){
+        listimg[0].setAttribute("src","./assets/picture/home.png");
+        listimg[1].setAttribute("src","./assets/picture/shoucang.png");
+        listimg[2].setAttribute("src","./assets/picture/my.png");
+    }
+    
+    function initfont(index) {
+        for(var i=0;i<index;i++)
+        {
+            listfont[i].className="";
+        }    
+    }
+    
+    function switchImg(index){
+        switch(index){
+            case 0:
+                 listimg[0].setAttribute("src","./assets/picture/home_active.png");
+             break;
+             case 1:
+                 listimg[1].setAttribute("src","./assets/picture/shoucang_active.png");
+             break;
+             case 2:
+                 listimg[2].setAttribute("src","./assets/picture/my_active.png");
+             break;
+
+        }
+    }
+    function panduan(index){
+        switch(index){
+            case 0:
+                $("#tbodyCenter").load("home.html");
+            break;
+            case 1:
+                $("#tbodyCenter").load("test2.html");
+            break;
+            case 2:
+                $("#tbodyCenter").load("test.html");
+            break;
+        }
+    }
+
+    </script>
 
 
 
@@ -306,7 +445,5 @@
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <!--<![endif]-->
-<script src="./assets/js/amazeui.min.js"></script>
-<script src="./assets/js/jquery.min.js"></script>
 </body>
 </html>
