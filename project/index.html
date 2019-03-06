@@ -1,378 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="viewport"
-              content="width=device-width, initial-scale=1">
-        <title>尽智研究院</title>
-      
-        <!-- Set render engine for 360 browser -->
-        <meta name="renderer" content="webkit">
-      
-        <!-- No Baidu Siteapp-->
-        <meta http-equiv="Cache-Control" content="no-siteapp"/>
-      
-        <link rel="icon" type="image/png" href="assets/i/favicon.png">
-      
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
-      
-        <!-- Add to homescreen for Safari on iOS -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-        <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-      
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-        <meta name="msapplication-TileColor" content="#0e90d2">
-      
-        <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-        <!--
-        <link rel="canonical" href="http://www.example.com/">
-        -->
-      
-        <link rel="stylesheet" href="./assets/css/amazeui.min.css">
-        <link rel="stylesheet" href="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>尽智研究院</title>
 
-        <link rel="stylesheet" type="text/css" href="./assets/aui/css/api.css" />
-        <link rel="stylesheet" type="text/css" href="./assets/aui/css/aui.2.0.css" />
-        <style>
-            .my-index-homepicture {padding:0px 0px 20px 0px}
-            .my-am-header {background-color: white;bottom: none}
-            .my-am-button {border-radius:5px 5px 5px 5px;background:black;border:1px solid #000;font-size:14px}
-    
-            body {
-                      background-color: white;
-                      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-              }
-            .trade-express {
-                    width: 96%;
-                    height: 54x;
-                    margin-left: 2%;
-                    margin-right: 2%;
-                    overflow: hidden;
-                    -webkit-box-shadow: 0 3px 8px 0 hsla(0,0%,89%,.55);
-                    box-shadow: 0 3px 8px 0 hsla(0,0%,89%,.55);
-                    border: 1px solid #e8e8e8;
-                    border-radius: 4px;
-                    text-align:center;
-            }
-            .trade-express .left-img {
-                    width:8vw;
-                    height: 8vw;
-                    float:left;
-                    position:relative;
-                    display: flex;
-                    -webkit-box-pack:center
-            }
-            li,ul{
-                    list-style: none;
-            }
-            li, ul {
-            padding: 0;
-            margin: 0;
-            }
-            .alink {
-                display: -webkit-flex;
-                display: flex;
-                margin-top:15px;
-                padding-bottom:15px;
-                border-bottom:.5px solid #f5f5f5;
-    
-            }
-            * {
-                box-sizing:border-box;
-            }
-    
-            a {
-                text-decoration: none;
-                color:inherit;
-            }
-            .alink .article {
-                -webkit-box-flex: 1;
-                flex: 1;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                flex-direction: column;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                margin-right: 10px;
-            }
-            .alink .article .article-title{
-                font-family: PingFangSC-Medium;
-                display: block;
-                -webkit-box-flex: 1;
-                flex: 1;
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <script src="./assets/js/amazeui.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+
+  <link rel="stylesheet" type="text/css" href="./assets/aui/css/api.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/aui/css/aui.2.0.css" />
+
+
+
+
+
+
+  <style>
+        .my-index-homepicture {padding:0px 0px 20px 0px}
+        .my-am-header {background-color: white;bottom: none}
+        .my-am-button {border-radius:5px 5px 5px 5px;background:black;border:1px solid #000;font-size:14px}
+
+        body {
+                  background-color: white;
+                  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+        }
+        .my-trade-express {
+                width: 96%;
+                height: 54x;
+                margin-left: 2%;
+                margin-right: 2%;
                 overflow: hidden;
-                line-height: 21px;
-                font-size: 15px;
-                color: #27292e;
-            }
-            .alink .article .article-marke {
-                margin: 0;
-                display: -webkit-box;
+                -webkit-box-shadow: 0 3px 8px 0 hsla(0,0%,89%,.55);
+                box-shadow: 0 3px 8px 0 hsla(0,0%,89%,.55);
+                border: 1px solid #e8e8e8;
+                border-radius: 4px;
+                text-align:center;
+        }
+        .trade-express  {
+                width:8vw;
+                height: 8vw;
+                float:left;
+                position:relative;
                 display: flex;
-                -webkit-box-pack: justify;
-                justify-content: space-between;
-                font-size: 12px;
-                color: #9da0a5;
-            }
-            p {
-                padding: 0;
-            }
-            p {
-                display: block;
-                margin-block-start: 1em;
-                margin-block-end: 1em;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-            }
-    
-            .alink .article-picture {
-                width: 110px;
-                height: 90px;
-            }
-            .fixed {
-                    position: fixed;
-                    background-color: white;
-                    border: none;
-                    bottom:0px;
-    
-            }
-            .text-lable {
-                    margin-top:0.1rem;font-size:17px;font-family: 'Courier New', Courier, monospace;
-            }
-    
-            .my-home-tab {
-              text-align:center;
-              line-height: 1rem;
-            }
-            .my-home-slider{
-              border-radius: 8px;
-            }
-            .touchfont{
-                    color:black;
-            }
-            .fontcontent{
-                    font-size:18px;
-            }
-            
-      </style>
-      <script src="./assets/js/amazeui.min.js"></script>
-      <script src="./assets/js/jquery.min.js"></script>
+                -webkit-box-pack:center
+        }
+        li,ul{
+                list-style: none;
+        }
+        li, ul {
+        padding: 0;
+        margin: 0;
+        }
+        .alink {
+            display: -webkit-flex;
+            display: flex;
+            margin-top:15px;
+            padding-bottom:15px;
+            border-bottom:.5px solid #f5f5f5;
+
+        }
+
+
+        a {
+            text-decoration: none;
+            color:inherit;
+        }
+        .alink .article {
+            -webkit-box-flex: 1;
+            flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+        .alink .article .article-title{
+            font-family: PingFangSC-Medium;
+            display: block;
+            -webkit-box-flex: 1;
+            flex: 1;
+            overflow: hidden;
+            line-height: 21px;
+            font-size: 15px;
+            color: #27292e;
+        }
+        .alink .article .article-marke {
+            margin: 0;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #9da0a5;
+        }
+      
+        .alink .article-picture {
+            width: 110px;
+            height: 90px;
+        }
+        .fixed {
+                position: fixed;
+                background-color: white;
+                border: none;
+                bottom:0px;
+
+        }
+
+        .text-lable {
+                margin-top:0.1rem;font-size:17px;font-family: 'Courier New', Courier, monospace;
+        }
+
+        .my-home-tab {
+            text-align: center;
+            line-height: 1rem;
+        }
+        .my-home-slider{
+          border-radius: 8px;
+        }
+        .touchfont{
+                color:black;
+        }
+        .fontcontent{
+                font-size:18px;
+        }
+  </style>
 </head>
 <body>
-    
-    <div id="tbodyCenter">
-                <div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{&quot;directionNav&quot;:false}' >
-        <ul class="am-slides">
-            <li>
-                <img src="./assets/picture/home01.jpg" class="my-home-slider">
-                <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
-               
-            </li>
-            <li>
-                <img src="./assets/picture/home02.jpg" class="my-home-slider">
-                <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
-               
-            </li>
-            <li>
-                <img src="./assets/picture/home03.jpg" class="my-home-slider">
-                <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
-               
-            </li>
-        </ul>
-            </div>
-              <!--white-space:nowrap强制换行-->
-            <div class="am-g" style="margin-top:15px;white-space:nowrap;margin-bottom: 15px">
-                <div class="am-u-sm-3 my-home-tab" id="kcfwtab">
-                   <img src="./assets/picture/kcfw0.png" class="" alt="" width="50%"> 
-                   <p>科创服务</p>
-                </div>
-                <div class="am-u-sm-3 my-home-tab" id="kcfwtab">
-                   <img src="./assets/picture/hydt0.png" width="50%"class="" alt="">
-                   <p>行业动态</p>     
-                </div>
-                <div class="am-u-sm-3 my-home-tab" id="kcfwtab">
-                  <img src="./assets/picture/sxzp0.png" width="50%" alt="">
-                  <p>实习招聘</p>
-                </div>
-                <div class="am-u-sm-3 my-home-tab" id="kcfwtab">
-                  <img src="./assets/picture/zgrz0.png" width="50%" alt="">
-                  <p>资格认证</p>
-                </div>        
-              </div>
+
+<div id="tbodyCenter"></div>
 
 
-              <div class="trade-express"> 
-                <span style="font-size:16px;color:#9da0a5 ">test</span>
-              </div>
-            
-            
-              <div style="margin-top:5px;margin-bottom: 5px">
-                <img src="./assets/picture/wntj.png" alt="" width="30%" >
-                <a href="" style="float:right;padding: 4px;">换一批</a>
-              </div>
-            
-            
-            
-            
-            
-            
-            
-            <div style="padding:15px">
-              <ul>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                          <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="other.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-                      <li>
-                                      <a href="test.html" class="alink">
-                                                      <div class="article">
-                                                          <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
-                                                          <p class="article-marke">
-                                                              <span>创新公司</span>
-                                                              <span class="am-icon-comment">20</span>
-                                                          </p>
-                                                      </div>
-                                                      <div class="article-picture">
-                                                        <img src="./assets/picture/article.jpg" alt="" width="110px" height="90px">
-                                                      </div>
-                                                  </a>
-                                                  
-                      </li>
-              
-              </ul>
-              </div>
-            
-    </div>
+    <footer class="aui-bar aui-bar-tab"  id="footer" style="border-top: 1px solid #dbdbdb; position:fixed;bottom:0;z-index:999">
+        <ul id="parent">
+            <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                <img src="./assets/picture/home_active.png" style="width: 25px;padding-top: 5px;" />
+                    <p class="touchfont">首页</p>
+            </li>
+            <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                <img src="./assets/picture/shoucang.png" style="width: 25px;padding-top: 5px;" />
+                    <p>精选</p>
+            </li>
+            <li class="aui-bar-tab-item" style="line-height:1.1rem">
+                <img src="./assets/picture/my.png" style="width: 25px;padding-top: 5px;" />
+                    <p>我的</p>
+            </li>
+        </ul>  
+    </footer>
 
-        <footer class="aui-bar aui-bar-tab"  id="footer" style="border-top: 1px solid #dbdbdb;">
-                <ul id="parent">
-                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                        <img src="./assets/picture/home_active.png" style="width: 25px;padding-top: 5px;" />
-                        <p class="touchfont">
-                            首页
-                        </p>
-                    </li>
-                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                        <img src="./assets/picture/shoucang.png" style="width: 25px;padding-top: 5px;" />
-                        <p>
-                            精选
-                        </p>
-                    </li>
-                    <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                        <img src="./assets/picture/my.png" style="width: 25px;padding-top: 5px;" />
-                        <p>
-                            我的
-                        </p>
-                    </li>
-                </ul>
-          
-          
-            </footer>
-</body>
+
 
 <script type="text/javascript" src="./assets/aui/script/api.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.min.js" ></script>
 <script type="text/javascript">
-
-    
     var listfont=document.getElementById("parent").getElementsByTagName("p");
     var listimg=document.getElementById("parent").getElementsByTagName("img");
     var listli=document.getElementById("parent").children;
 
+    $("#tbodyCenter").load('home.html');
 
     for(var i=0;i<listli.length;i++)
     {
@@ -423,10 +242,25 @@
                 $("#tbodyCenter").load("test2.html");
             break;
             case 2:
-                $("#tbodyCenter").load("kcfwall.html");
+                $("#tbodyCenter").load("test.html");
             break;
         }
     }
 
     </script>
+
+
+
+
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--<![endif]-->
+</body>
 </html>
