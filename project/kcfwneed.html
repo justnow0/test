@@ -84,11 +84,24 @@
       text-align: center;
 
     }
-  
+    
+    .all{
+      width:100%;
+      height: 100%;
+      position:absolute;
+      top: 0px;
+    }
   </style>
+  <script>
+      $(document).ready(function(){
+          $("#return").click(function(){
+              location.href="kcfw.html";
+          })
+      })
+  </script>
 </head>
 <body>
-
+  <div class="all">
     <img src="./assets/picture/home01.jpg" alt="" width="100%" style="border-radius: 8px;">
     <div style="background-color:white;padding:5px;">
       <div style="margin-bottom:5px;"><span class="my-kcfwneed-title">需求求助</span><span>智能交通管理平台技术咨询</span></div>
@@ -110,13 +123,13 @@
       <form action="">
         <div style="padding:10px 0px 10px 0px"><p style="text-align:center;background: white;border-radius: 5px;"><input type="text" class="am-form-field am-radius" placeholder="输入您的企业名字" /></p></div>
         <div style="padding:0px 0px 10px 0px"><p style="text-align:center;background: white;border-radius: 5px;"><input type="text" class="am-form-field am-radius" placeholder="请输入您的手机号码" /></p></div>
-        <button type="button" class="am-btn am-btn-primary am-btn-block" style="height:6%;background-color: black;outline:none;padding: 5px;border-radius: 5px;border:none">立即抢购咨询</button>
+        <button type="button" class="am-btn am-btn-primary am-btn-block" style="background-color: black;outline:none;padding: 5px;border-radius: 5px;border:none;font-size:25px" id="return">立即抢购咨询</button>
       </form>
     </div>
     <div style="text-align:center;">
       <p style="color:black">一对一专业顾问,30分钟急速响应</p>
     </div>
-
+  </div>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
