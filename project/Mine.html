@@ -1,45 +1,6 @@
 <!doctype html>
 <html class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
-  <title>Hello Amaze UI</title>
-
-  <!-- Set render engine for 360 browser -->
-  <meta name="renderer" content="webkit">
-
-  <!-- No Baidu Siteapp-->
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-
-  <link rel="icon" type="image/png" href="assets/i/favicon.png">
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
-
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-  <meta name="msapplication-TileColor" content="#0e90d2">
-
-
-  <!--jquery要在前面加载-->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/amazeui.min.js"></script>
-
-
-  <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-
   <style>
         .my-mine-user{
               display: -webkit-flex;
@@ -64,57 +25,69 @@
       <!--这里供后端调用，替换图片-->
       <img src="./assets/picture/test.jpg" alt="" id="user_image" width="15%" style="margin:10px">
       <div>
-            <p style="white-space:nowrap;margin-bottom:0;font-size:1.5rem">小飞11665</p>
-            <span style="white-space:nowrap;font-size:1rem;color:#9da0a5">简介:暂无介绍</span>
+            <p style="white-space:nowrap;margin-bottom:0;font-size:1rem">小飞11665</p>
+            <span style="white-space:nowrap;font-size:0.5rem;color:#9da0a5">简介:暂无介绍</span>
       </div>
       <div style="position:absolute;right:5px">
-            <span style="font-size:1rem">会员</span>
             <span class="am-icon-home "></span>
+            <span style="font-size:1rem;color:chocolate">会员</span>
+            <span class="am-icon-chevron-right" style="color:chocolate"></span>
+
 
       </div>
-
 </div>
+
+
 
 <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
 
 <div class="my-mine-trends">
-      <div style="text-align:center;line-height: 15px">
-            <span style="display:block;font-size: 1rem"><b>0</b></span>
-            <span style="font-size:0.9rem;color:#9da0a5">微博</span>
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>0</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">微博</span>
       </div>
-      <div style="text-align:center;line-height: 15px">
-            <span style="display:block;font-size: 1rem"><b>10</b></span>
-            <span style="font-size:0.9rem;color:#9da0a5">关注</span>
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>10</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">关注</span>
       </div>
-      <div style="text-align:center;line-height: 15px">
-            <span style="display:block;font-size: 1rem"><b>200</b></span>
-            <span style="font-size:0.9rem;color:#9da0a5">粉丝</span>
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>200</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">粉丝</span>
       </div>
+
+</div>
+<div>
+      <ul class="am-list am-list-static am-list-border" style="margin-bottom:5rem">
+            <li style="border-top:5px solid #9da0a5">
+                  我的主页<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  认证<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  订单<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  发布<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  招聘<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  收藏 <span style="padding-left:20px">赞、评论、收藏都在这里</span> <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="border-top:5px solid #9da0a5">
+                  联系客服 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li>
+                  关于我们 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+      </ul>
 
 
 </div>
-<hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
-
-<div style="margin-top:20px">
 
 
-</div>
-
-<div class="my-mine-trends">
-            <div style="text-align:center;line-height: 15px">
-                  <span style="font-size: 1rem"><b>0</b></span>
-                  <span style="font-size:0.9rem;color:#9da0a5">微博</span>
-            </div>
-            <div style="text-align:center;line-height: 15px">
-                  <span style="font-size: 1rem"><b>10</b></span>
-                  <span style="font-size:0.9rem;color:#9da0a5">关注</span>
-            </div>
-            <div style="text-align:center;line-height: 15px">
-                  <span style="font-size: 1rem"><b>200</b></span>
-                  <span style="font-size:0.9rem;color:#9da0a5">粉丝</span>
-            </div>
-            
-</div>
 
 </body>
 </html>
