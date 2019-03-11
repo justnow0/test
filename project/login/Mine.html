@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <style>
+        .my-mine-user{
+              display: -webkit-flex;
+              display: flex;
+              align-items:center;
+              justify-content:flex-start;
+        }
+        .my-mine-trends{
+              display: -webkit-flex;
+              display: flex;
+              justify-content: space-around;
+        }
+  </style>
+  <script>
+      $(document).ready(function(){
+            $("#my").click(function(){
+                  location.href="/test/project/login/MyHome.html";
+            })
+            $("#about").click(function(){
+                  location.href="/test/project/login/aboutus.html";
+            })
+
+      })
+  </script>
+
+
+</head>
+<body>
+
+<img src="../assets/picture/home01.jpg" alt="" width="100%" id="top_image">
+
+
+<div class="my-mine-user">
+      <!--这里供后端调用，替换图片-->
+      <img src="/test/project/assets/picture/test.jpg" alt="" id="user_image" width="25%" style="margin:10px">
+      <div>
+            <p style="white-space:nowrap;margin-bottom:0;font-size:23px;color: black">小飞11665</p>
+            <span style="white-space:nowrap;font-size:15px;color:#9da0a5">简介:暂无介绍</span>
+      </div>
+      <div style="position:absolute;right:5px">
+            <span class="am-icon-home "></span>
+            <span style="font-size:1rem;color:chocolate">会员</span>
+            <span class="am-icon-chevron-right" style="color:chocolate"></span>
+      </div>
+</div>
+
+
+
+<hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
+
+<div class="my-mine-trends">
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>0</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">微博</span>
+      </div>
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>10</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">关注</span>
+      </div>
+      <div style="text-align:center;line-height: 20px">
+            <span style="display:block;font-size: 0.8rem"><b>200</b></span>
+            <span style="font-size:0.5rem;color:#9da0a5">粉丝</span>
+      </div>
+
+</div>
+<div>
+      <ul class="am-list am-list-static am-list-border" style="margin-bottom:5rem">
+            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:25px" id="my">
+                  我的主页<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="authentication">
+                  认证<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="order">
+                  订单<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="push"> 
+                  发布<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="recruit">
+                  招聘<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="collection">
+                  收藏 <span style="padding-left:20px">赞、评论、收藏都在这里</span> <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:25px" id="contact">
+                  联系客服 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+            <li style="padding:10px 0 10px 10px;font-size:25px" id="about">
+                  关于我们 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
+            </li>
+      </ul>
+
+
+</div>
+
+
+
+</body>
+</html>
