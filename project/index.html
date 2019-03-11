@@ -183,9 +183,9 @@
     </footer>
 
 
-
-<script type="text/javascript" src="./assets/aui/script/api.js"></script>
 <script type="text/javascript" src="./assets/js/jquery.min.js" ></script>
+<script type="text/javascript" src="./assets/aui/script/api.js"></script>
+
 <script type="text/javascript">
     var listfont=document.getElementById("parent").getElementsByTagName("p");
     var listimg=document.getElementById("parent").getElementsByTagName("img");
@@ -235,33 +235,26 @@
     }
     
     function panduan(index){
+        var referrce = document.referrer;
+        alert(referrce);
         switch(index){
             case 0:
-                $("#tbodyCenter").load("home.html");
-            break;
+                if (referrce.indextOf("aboutus") != -1)
+                    $("#tbodyCenter").load("./login/Mine.html");
+                else 
+                    $("#tbodyCenter").load("home.html");
+                break;
             case 1:
                 $("#tbodyCenter").load("test2.html");
-            break;
+                break;
             case 2:
-                $("#tbodyCenter").load("Mine.html");
+                $("#tbodyCenter").load("./login/Mine.html");
+                
             break;
         }
     }
 
     </script>
 
-
-
-
-
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
 </body>
 </html>
