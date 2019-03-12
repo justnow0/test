@@ -30,20 +30,17 @@
   <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
   <meta name="msapplication-TileColor" content="#0e90d2">
 
-  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-  <link rel="canonical" href="http://www.example.com/">
-  -->
-  <script src="./assets/js/jquery.min.js"></script>
-  <script src="./assets/js/amazeui.min.js"></script>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/amazeui.min.js"></script>
+  <script type="text/javascript" src="/assets/aui/script/api.js"></script>
 
 
-  <link rel="stylesheet" href="./assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="./assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
 
-  <link rel="stylesheet" type="text/css" href="./assets/aui/css/api.css" />
-  <link rel="stylesheet" type="text/css" href="./assets/aui/css/aui.2.0.css" />
-
+  <link rel="stylesheet" type="text/css" href="assets/aui/css/api.css" />
+  <link rel="stylesheet" type="text/css" href="assets/aui/css/aui.2.0.css" />
 
 
 
@@ -168,30 +165,47 @@
     <footer class="aui-bar aui-bar-tab"  id="footer" style="border-top: 1px solid #dbdbdb; position:fixed;bottom:0;z-index:999">
         <ul id="parent">
             <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                <img src="./assets/picture/home_active.png" style="width: 25px;padding-top: 5px;" />
+                <img src="/assets/picture/home_active.png" style="width: 25px;padding-top: 5px;" />
                     <p class="touchfont">首页</p>
             </li>
             <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                <img src="./assets/picture/shoucang.png" style="width: 25px;padding-top: 5px;" />
+                <img src="/assets/picture/shoucang.png" style="width: 25px;padding-top: 5px;" />
                     <p>精选</p>
             </li>
             <li class="aui-bar-tab-item" style="line-height:1.1rem">
-                <img src="./assets/picture/my.png" style="width: 25px;padding-top: 5px;" />
+                <img src="/assets/picture/my.png" style="width: 25px;padding-top: 5px;" />
                     <p>我的</p>
             </li>
         </ul>  
     </footer>
 
 
-<script type="text/javascript" src="./assets/js/jquery.min.js" ></script>
-<script type="text/javascript" src="./assets/aui/script/api.js"></script>
 
 <script type="text/javascript">
     var listfont=document.getElementById("parent").getElementsByTagName("p");
     var listimg=document.getElementById("parent").getElementsByTagName("img");
     var listli=document.getElementById("parent").children;
 
-    $("#tbodyCenter").load('home.html');
+    var referrce = document.referrer;
+
+
+    function loadpage(){
+
+        var referrcepage = ["abountus.html","MyHomePage.html","order.html","authentication.html","publish.html","recruit.html","collection.html","customservice.html"];
+
+        for (var i = 0; i<referrcepage.length;i++){
+            if(referrce.indexOf(referrcepage[i])>-1) {
+                $("#tbodyCenter").load('/login/Mine.html');
+                listimg[0].setAttribute("src","/assets/picture/home.png");
+                listimg[2].setAttribute("src","/assets/picture/my_active.png");
+                break; 
+            } else {
+                $("#tbodyCenter").load('home.html');
+            }
+        }
+
+    }
+    loadpage();
 
     for(var i=0;i<listli.length;i++)
     {
@@ -207,9 +221,9 @@
     };
     
     function initimg(){
-        listimg[0].setAttribute("src","./assets/picture/home.png");
-        listimg[1].setAttribute("src","./assets/picture/shoucang.png");
-        listimg[2].setAttribute("src","./assets/picture/my.png");
+        listimg[0].setAttribute("src","/assets/picture/home.png");
+        listimg[1].setAttribute("src","/assets/picture/shoucang.png");
+        listimg[2].setAttribute("src","/assets/picture/my.png");
     }
     
     function initfont(index) {
@@ -222,35 +236,29 @@
     function switchImg(index){
         switch(index){
             case 0:
-                 listimg[0].setAttribute("src","./assets/picture/home_active.png");
+                 listimg[0].setAttribute("src","/assets/picture/home_active.png");
              break;
              case 1:
-                 listimg[1].setAttribute("src","./assets/picture/shoucang_active.png");
+                 listimg[1].setAttribute("src","/assets/picture/shoucang_active.png");
              break;
              case 2:
-                 listimg[2].setAttribute("src","./assets/picture/my_active.png");
+                 listimg[2].setAttribute("src","/assets/picture/my_active.png");
              break;
 
         }
     }
     
     function panduan(index){
-        var referrce = document.referrer;
-        alert(referrce);
         switch(index){
             case 0:
-                if (referrce.indextOf("aboutus") != -1)
-                    $("#tbodyCenter").load("./login/Mine.html");
-                else 
-                    $("#tbodyCenter").load("home.html");
+                $("#tbodyCenter").load("home.html");
                 break;
             case 1:
                 $("#tbodyCenter").load("test2.html");
                 break;
             case 2:
-                $("#tbodyCenter").load("./login/Mine.html");
-                
-            break;
+                $("#tbodyCenter").load("/login/Mine.html");
+                break;
         }
     }
 

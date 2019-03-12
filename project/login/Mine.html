@@ -13,29 +13,25 @@
               display: flex;
               justify-content: space-around;
         }
+        .my-mine-detail{
+              display: -webkit-flex;
+              display: flex;
+              flex-direction:column;
+              align-content:space-between;
+        }
   </style>
-  <script>
-      $(document).ready(function(){
-            $("#my").click(function(){
-                  location.href="/test/project/login/MyHome.html";
-            })
-            $("#about").click(function(){
-                  location.href="/test/project/login/aboutus.html";
-            })
 
-      })
-  </script>
 
 
 </head>
 <body>
 
-<img src="../assets/picture/home01.jpg" alt="" width="100%" id="top_image">
+<img src="/assets/picture/home01.jpg" alt="" width="100%" id="top_image">
 
 
 <div class="my-mine-user">
       <!--这里供后端调用，替换图片-->
-      <img src="/test/project/assets/picture/test.jpg" alt="" id="user_image" width="25%" style="margin:10px">
+      <img src="/assets/picture/test.jpg" alt="" id="user_image" width="80px" style="margin:10px">
       <div>
             <p style="white-space:nowrap;margin-bottom:0;font-size:23px;color: black">小飞11665</p>
             <span style="white-space:nowrap;font-size:15px;color:#9da0a5">简介:暂无介绍</span>
@@ -68,35 +64,43 @@
 </div>
 <div>
       <ul class="am-list am-list-static am-list-border" style="margin-bottom:5rem">
-            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:25px" id="my">
+            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:20px" id="my">
                   我的主页<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="authentication">
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="authentication">
                   认证<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="order">
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="order">
                   订单<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="push"> 
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="push"> 
                   发布<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="recruit">
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="recruit">
                   招聘<i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="collection">
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="collection">
                   收藏 <span style="padding-left:20px">赞、评论、收藏都在这里</span> <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:25px" id="contact">
+            <li style="border-top:5px solid #9da0a5;padding:10px 0 10px 10px;font-size:20px" id="contact">
                   联系客服 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
-            <li style="padding:10px 0 10px 10px;font-size:25px" id="about">
+            <li style="padding:10px 0 10px 10px;font-size:20px" id="about">
                   关于我们 <i class="am-icon-chevron-right am-icon-fw" style="position:absolute;right:0"></i>
             </li>
       </ul>
-
-
 </div>
+<script>
+      $(document).ready(function(){
+            $("#my").click(function(){
+                  location.href="/login/MyHomePage.html";
+            })
+            $("#about").click(function(){
+                  location.href="/login/abountus.html";
+            })
 
+      })
+  </script>
 
 
 </body>
