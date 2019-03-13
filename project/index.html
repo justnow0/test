@@ -31,16 +31,16 @@
   <meta name="msapplication-TileColor" content="#0e90d2">
 
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/amazeui.min.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/amazeui.min.js"></script>
   <script type="text/javascript" src="/assets/aui/script/api.js"></script>
 
 
-  <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
 
-  <link rel="stylesheet" type="text/css" href="assets/aui/css/api.css" />
-  <link rel="stylesheet" type="text/css" href="assets/aui/css/aui.2.0.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/aui/css/api.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/aui/css/aui.2.0.css" />
 
 
 
@@ -156,6 +156,17 @@
                 font-size:18px;
         }
   </style>
+    <script>
+
+        $(document).ready(function(){
+            $("#kcfwtab").click(function(){
+                location.href="kcfw.html";
+            })
+            $("#search").click(function(){
+                location.href="hydttab.html";
+            })
+        })
+    </script>
 </head>
 <body>
 
@@ -191,7 +202,7 @@
 
     function loadpage(){
 
-        var referrcepage = ["abountus.html","MyHomePage.html","order.html","authentication.html","publish.html","recruit.html","collection.html","customservice.html"];
+        var referrcepage = ["abountus.html","MyHomePage.html","order.html","authentication.html","publish.html","recruit.html","collection.html","customservice.html","service.html"];
 
         for (var i = 0; i<referrcepage.length;i++){
             if(referrce.indexOf(referrcepage[i])>-1) {
