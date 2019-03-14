@@ -19,7 +19,15 @@
               flex-direction:column;
               align-content:space-between;
         }
+        .box{
+              width: 200px;
+              height: 200px;
+              text-align: center;
+        }
   </style>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/layer/mobile/layer.js"></script>
+
 
 
 
@@ -42,7 +50,7 @@
             <span class="am-icon-chevron-right" style="color:chocolate"></span>
       </div>
 </div>
-
+<img src="/assets/picture/qrcode.png" alt="" width="43px" height="43px">
 
 
 <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
@@ -108,6 +116,7 @@
             </li>
       </ul>
 </div>
+
 <script>
       $(document).ready(function(){
             $("#my").click(function(){
@@ -116,10 +125,21 @@
             $("#about").click(function(){
                   location.href="/login/abountus.html";
             })
-
+            $("#contact").click(function() {
+                  layer.open({
+                  type: 1,
+                  area:['600px','360px'],
+                  shadeClose: true,
+                  content: $("#pop").html()
+                  });
+            })
       })
   </script>
-
-
+      <div style="background-color: #F6F6F6;display: none" id="pop" class="box">
+            <img src="/assets/picture/qrcode.jpg" alt="" width="129px" height="129px">
+            <span style="display:block">长按二维码进行关注</span>
+      </div>
 </body>
+
+
 </html>
