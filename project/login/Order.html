@@ -1,0 +1,421 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>尽智研究院</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+
+  <!--jquery要在前面加载-->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/amazeui.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link rel="stylesheet" href="/assets/aui/css/aui.2.0.css">
+  <link rel="stylesheet" href="/assets/layui/css/layui.css">
+  <style>
+      .my-login-head{
+        background-color: black;  
+      }
+
+      a{
+        text-decoration:none;
+        color: black;
+      }
+      body{
+        background-color: #f6f6f6
+      }
+      .my-collection-brand {
+        margin-left:2%;
+        margin-right: 2%;
+        height: 80px;
+        margin-top:10px;
+        background-color:white;
+        border-radius: 5px;
+        display:-webkit-flex;
+        display:flex;
+        justify-content:space-between;
+        align-items:center
+      }
+      .my-order-head{
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+      }
+      .my-order-all {
+        height: 200px;
+        display: -webkit-flex;
+        display: flex;
+        justify-content:space-around;
+        flex-direction:column;
+        margin-left:2vw;
+        margin-right: 2vw;
+        margin-top:10px;
+        background-color: white;
+        border-radius: 1vw;
+
+      }
+
+
+  </style>
+  <script>
+    $("document").ready(function(){
+      
+    })
+  </script>
+
+
+<body>
+
+<header data-am-widget="header" class="am-header am-header-default my-login-head">
+    <div class="am-header-left am-header-nav">
+        <a href="Mine.html" class="">
+                <span class="am-icon-angle-left" style="color:white"></span>
+        </a>
+    </div>
+    <span class="am-header-title" style="font-size:17px;color:white">订单</span>
+</header>
+
+
+
+<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+    <ul class="layui-tab-title my-order-head">
+      <li class="layui-this">全部</li>
+      <li>待付款</li>
+      <li>待发货</li>
+      <li>待收货</li>
+      <li>待评价</li>
+    </ul>
+
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+              <div class="my-order-all">
+                <div style="display:-web-flex;display:flex; justify-content:space-between">
+                  <div style="display:inline;margin-left:10px">
+                    <span>北京工业大学</span>
+                    <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                  </div>
+                  <div style="display: inline">
+                    <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                  </div>
+                </div>
+                <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                  <img src="/assets/picture/article.jpg" alt="" width="35%">
+                  <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                  <div style="flex-grow:1">
+                    <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                      <div align="right">
+                      <span style="display:block">￥100</span>
+                      <span>x <span>10</span>
+                      </span>
+                    </div>
+                    </div>
+                  </div>
+
+                </div>                  
+                <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                <div align="right" style="margin-right:10px">
+                  <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                  <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                  <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                </div>
+              </div>
+              <div class="my-order-all">
+                  <div style="display:-web-flex;display:flex; justify-content:space-between">
+                    <div style="display:inline;margin-left:10px">
+                      <span>北京工业大学</span>
+                      <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                    </div>
+                    <div style="display: inline">
+                      <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                    </div>
+                  </div>
+                  <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                    <img src="/assets/picture/article.jpg" alt="" width="35%">
+                    <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                    <div style="flex-grow:1">
+                      <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                        <div align="right">
+                        <span style="display:block">￥100</span>
+                        <span>x <span>10</span>
+                        </span>
+                      </div>
+                      </div>
+                    </div>
+  
+                  </div>                  
+                  <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                  <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                  <div align="right" style="margin-right:10px">
+                    <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                    <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                    <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                  </div>
+                </div>
+                <div class="my-order-all">
+                    <div style="display:-web-flex;display:flex; justify-content:space-between">
+                      <div style="display:inline;margin-left:10px">
+                        <span>北京工业大学</span>
+                        <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                      </div>
+                      <div style="display: inline">
+                        <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                      </div>
+                    </div>
+                    <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                      <img src="/assets/picture/article.jpg" alt="" width="35%">
+                      <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                      <div style="flex-grow:1">
+                        <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                          <div align="right">
+                          <span style="display:block">￥100</span>
+                          <span>x <span>10</span>
+                          </span>
+                        </div>
+                        </div>
+                      </div>
+    
+                    </div>                  
+                    <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                    <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                    <div align="right" style="margin-right:10px">
+                      <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                      <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                      <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                    </div>
+                  </div>
+                  <div class="my-order-all">
+                      <div style="display:-web-flex;display:flex; justify-content:space-between">
+                        <div style="display:inline;margin-left:10px">
+                          <span>北京工业大学</span>
+                          <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                        </div>
+                        <div style="display: inline">
+                          <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                        </div>
+                      </div>
+                      <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                        <img src="/assets/picture/article.jpg" alt="" width="35%">
+                        <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                        <div style="flex-grow:1">
+                          <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                            <div align="right">
+                            <span style="display:block">￥100</span>
+                            <span>x <span>10</span>
+                            </span>
+                          </div>
+                          </div>
+                        </div>
+      
+                      </div>                  
+                      <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                      <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                      <div align="right" style="margin-right:10px">
+                        <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                        <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                        <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="my-order-all">
+                        <div style="display:-web-flex;display:flex; justify-content:space-between">
+                          <div style="display:inline;margin-left:10px">
+                            <span>北京工业大学</span>
+                            <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                          </div>
+                          <div style="display: inline">
+                            <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                          </div>
+                        </div>
+                        <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                          <img src="/assets/picture/article.jpg" alt="" width="35%">
+                          <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                          <div style="flex-grow:1">
+                            <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                              <div align="right">
+                              <span style="display:block">￥100</span>
+                              <span>x <span>10</span>
+                              </span>
+                            </div>
+                            </div>
+                          </div>
+        
+                        </div>                  
+                        <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                        <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                        <div align="right" style="margin-right:10px">
+                          <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                          <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                          <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                        </div>
+                      </div>
+            </div>
+            <div class="layui-tab-item layui">
+                <div class="my-order-all">
+                  <div style="display:-web-flex;display:flex; justify-content:space-between">
+                    <div style="display:inline;margin-left:10px">
+                      <span>北京工业大学</span>
+                      <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                    </div>
+                    <div style="display: inline">
+                      <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                    </div>
+                  </div>
+                  <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                    <img src="/assets/picture/article.jpg" alt="" width="35%">
+                    <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                    <div style="flex-grow:1">
+                      <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                        <div align="right">
+                        <span style="display:block">￥100</span>
+                        <span>x <span>10</span>
+                        </span>
+                      </div>
+                      </div>
+                    </div>
+  
+                  </div>                  
+                  <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                  <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                  <div align="right" style="margin-right:10px">
+                    <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                    <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                    <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                  </div>
+                </div>
+              </div>
+              <div class="layui-tab-item layui">
+                  <div class="my-order-all">
+                    <div style="display:-web-flex;display:flex; justify-content:space-between">
+                      <div style="display:inline;margin-left:10px">
+                        <span>北京工业大学</span>
+                        <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                      </div>
+                      <div style="display: inline">
+                        <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                      </div>
+                    </div>
+                    <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                      <img src="/assets/picture/article.jpg" alt="" width="35%">
+                      <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                      <div style="flex-grow:1">
+                        <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                          <div align="right">
+                          <span style="display:block">￥100</span>
+                          <span>x <span>10</span>
+                          </span>
+                        </div>
+                        </div>
+                      </div>
+    
+                    </div>                  
+                    <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                    <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                    <div align="right" style="margin-right:10px">
+                      <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                      <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                      <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="layui-tab-item layui">
+                    <div class="my-order-all">
+                      <div style="display:-web-flex;display:flex; justify-content:space-between">
+                        <div style="display:inline;margin-left:10px">
+                          <span>北京工业大学</span>
+                          <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                        </div>
+                        <div style="display: inline">
+                          <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                        </div>
+                      </div>
+                      <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                        <img src="/assets/picture/article.jpg" alt="" width="35%">
+                        <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                        <div style="flex-grow:1">
+                          <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                            <div align="right">
+                            <span style="display:block">￥100</span>
+                            <span>x <span>10</span>
+                            </span>
+                          </div>
+                          </div>
+                        </div>
+      
+                      </div>                  
+                      <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                      <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                      <div align="right" style="margin-right:10px">
+                        <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                        <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                        <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="layui-tab-item layui">
+                      <div class="my-order-all">
+                        <div style="display:-web-flex;display:flex; justify-content:space-between">
+                          <div style="display:inline;margin-left:10px">
+                            <span>北京工业大学</span>
+                            <span class="am-icon-angle-right" style="margin-left:25px"></span>
+                          </div>
+                          <div style="display: inline">
+                            <span style="color:#FF5102;margin-right:10px">交易成功</span>
+                          </div>
+                        </div>
+                        <div style="margin:0 5px 0 10px;display: -web-flex;display: flex;align-items: flex-start;">
+                          <img src="/assets/picture/article.jpg" alt="" width="35%">
+                          <span style="margin:0 10px 0 10px">商品标题内容啊啊啊啊啊啊啊啊啊啊啊</span>
+                          <div style="flex-grow:1">
+                            <div style="display:-webkit-flex;display:flex;flex-direction:row-reverse;margin-right:5px">
+                              <div align="right">
+                              <span style="display:block">￥100</span>
+                              <span>x <span>10</span>
+                              </span>
+                            </div>
+                            </div>
+                          </div>
+        
+                        </div>                  
+                        <div style="margin:0 10px 0 0" align="right"><span>共<span>10</span>件商品&nbsp;</span> <span>合计:￥<span>1000</span></span></div>
+                        <!-- 动态判断该订单现在的内容，如删除订单、查看物流、评价-->
+                        <div align="right" style="margin-right:10px">
+                          <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;删除订单&nbsp;</span>
+                          <span style="padding:5px;border:1px solid #525252;color:#525252;border-radius:5px;font-size:10px;">&nbsp;查看物流&nbsp;</span>
+                          <span style="padding:5px;border:1px solid #FF5102;border-radius:5px;font-size:10px;color:#FF5102">&nbsp;评价&nbsp;</span>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+    </div>
+  <script src="/assets/layui/layui.js"></script>
+  <script>
+    layui.use('element', function(){
+      var element = layui.element;
+    });
+  </script>
+</body>
+</html>

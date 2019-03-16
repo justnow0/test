@@ -59,6 +59,7 @@
               height: 200px;
               text-align: center;
         }
+
   </style>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/layer/mobile/layer.js"></script>
@@ -175,7 +176,7 @@
             <a href="test2.html">
                 <div class="am-u-sm-4 " style="height:50px;padding-top:5px;padding-bottom:5px; color: rgb(105, 105, 105);">
                     <div style="height:27.5px;width:100%; font-size:20px;line-height:30px; ">
-                            <img src="/assets/picture/collection.png" alt="" width="20px" >
+                            <img src="/assets/picture/shoucang.png" alt="" width="20px" >
                     </div>
                     <div style="height:17.5px;width:100%;font-size:12px;line-height:12px; ">
                         精选
@@ -207,14 +208,20 @@
             $("#about").click(function(){
                   location.href="/login/abountus.html";
             })
+            $("#collection").click(function(){
+                  location.href="/login/Collection.html";
+            })
+            $("#order").click(function(){
+                  location.href="/login/Order.html";
+            })
             $("#contact").click(function() {
                   layer.open({
                   title: [
-                  '扫描二维码进行关注',
-                  'background-color:#00B1F0; color:#fff;'
+                  '长按二维码进行关注',
+                  'background-color:#02bafe; color:#fff;font-size:20px'
                   ],
                   anim: 'up',
-                  content: '<img src="/assets/picture/qrcode.jpg" alt="" width="129px" height="129px">'
+                  content: '<img src="/assets/picture/qrcode.jpg" alt="" width="173px" height="173px">'
                   });
             })
       })
