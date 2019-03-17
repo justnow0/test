@@ -63,12 +63,12 @@
   </style>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/layer/mobile/layer.js"></script>
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/amazeui.min.js"></script>
+<script src="/assets/layui/layui.js"></script>
+
 <script type="text/javascript" src="/assets/aui/script/api.js"></script>
 
-<script src="/assets/layer/mobile/layer.js"></script>
 
+<link rel="stylesheet" href="/assets/layui/css/layui.css">
 <link rel="stylesheet" href="/assets/css/amazeui.min.css">
 <link rel="stylesheet" href="/assets/css/app.css">
 
@@ -214,6 +214,24 @@
             $("#order").click(function(){
                   location.href="/login/Order.html";
             })
+
+            $("#authentication").click(function(){
+                  /*
+                  layui.use('layer',function(){
+                        var layer = layui.layer;
+                        layer.open({
+                              title:'请选择类型',
+                              //选择内容为2才能正确显示html中内容
+                              type:2,
+                              content:'AuthenClass.html'
+                        })
+
+                  });
+                  */
+                  location.href="/login/Authentication.html"
+            })
+
+
             $("#contact").click(function() {
                   layer.open({
                   title: [
@@ -221,9 +239,10 @@
                   'background-color:#02bafe; color:#fff;font-size:20px'
                   ],
                   anim: 'up',
+                  area:['150px','150px'],
                   content: '<img src="/assets/picture/qrcode.jpg" alt="" width="173px" height="173px">'
                   });
-            })
+      })
       })
   </script>
 
