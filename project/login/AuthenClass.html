@@ -5,13 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/amazeui.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+
+
 </head>
 <body>
-    <p>请选择类型</p>
-    <div>
-        <button>个人</button>
-        <button>高校、院所、企业</button>
-        <button>团队</button>
+    <div style="display: table;margin-top:30px">
+
+        <div style="display:table-cell;vertical-align:middile;text-align:center;">
+        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Single">个人</button>
+        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">高校</button>
+        </div>
+
+        <div style="display:table-cell;vertical-align:middile;text-align:center;">
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">院所</button>
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">企业</button>
+        </div>
+
+        <div style="display:table-cell;vertical-align:middile;text-align:center;">
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Group">团队</button>
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Other">其他</button>
+        </div>
     </div>
 </body>
+ <script>
+     $(document).ready(function(){
+        $("#Single").click(function(){
+            parent.close();
+            window.top.location ="/login/AuthenSingle.html";
+        })
+        $("#Many").click(function(){
+            window.top.location ="/login/AuthenMany.html";
+        })
+     })
+ 
+ 
+ </script>
 </html>
