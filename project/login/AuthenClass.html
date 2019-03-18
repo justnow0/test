@@ -8,20 +8,24 @@
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/amazeui.min.js"></script>
     <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+    <style>
+      button{
+          outline:none;
+      }
 
+    </style>
 
 </head>
 <body>
     <div style="display: table;margin-top:30px">
-
         <div style="display:table-cell;vertical-align:middile;text-align:center;">
         <button class="am-btn am-btn-primary" style="margin-top:5px" id="Single">个人</button>
-        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">高校</button>
+        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many0">高校</button>
         </div>
 
         <div style="display:table-cell;vertical-align:middile;text-align:center;">
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">院所</button>
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many">企业</button>
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many1">院所</button>
+            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many2">企业</button>
         </div>
 
         <div style="display:table-cell;vertical-align:middile;text-align:center;">
@@ -36,8 +40,11 @@
             parent.close();
             window.top.location ="/login/AuthenSingle.html";
         })
-        $("#Many").click(function(){
+        $("#Many2").click(function(){
             window.top.location ="/login/AuthenMany.html";
+        })
+        $("#Group").click(function(){
+            window.top.location = "/login/AuthenGroup.html";
         })
      })
  
