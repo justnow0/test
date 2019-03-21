@@ -15,20 +15,20 @@
             <!-- No Baidu Siteapp-->
             <meta http-equiv="Cache-Control" content="no-siteapp"/>
           
-            <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
           
             <!-- Add to homescreen for Chrome on Android -->
             <meta name="mobile-web-app-capable" content="yes">
-            <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
           
             <!-- Add to homescreen for Safari on iOS -->
             <meta name="apple-mobile-web-app-capable" content="yes">
             <meta name="apple-mobile-web-app-status-bar-style" content="black">
-            <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-            <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+            <meta name="apple-mobile-web-app-title" content="尽智研究院"/>
+
           
             <!-- Tile icon for Win8 (144x144 + tile color) -->
-            <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+
             <meta name="msapplication-TileColor" content="#0e90d2">
           
 
@@ -120,7 +120,7 @@
 
 </div>
 <div>
-      <ul class="am-list am-list-static am-list-border" style="margin-bottom:5rem">
+      <ul class="am-list am-list-static am-list-border">
             <li style="border-top:16px solid #F6F6F6;padding:10px 0 10px 15px;font-size:15px;display:-webkit-flex;display: flext;align-items: center" id="my">
                   <img src="/assets/picture/mine_01.png" alt="" height="20px" style="margin-right:15px">
                   <span>我的主页</span>
@@ -217,7 +217,12 @@
             $("#order").click(function(){
                   location.href="/login/Order.html";
             })
-
+            $("#push").click(function(){
+                  location.href="/login/Push.html";
+            })
+            $("#recruit").click(function(){
+                  location.href="/login/Recruit.html"
+            })
             $("#authentication").click(function(){
                   layui.use('layer',function(){
                         var layer = layui.layer;

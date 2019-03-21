@@ -12,27 +12,26 @@
       button{
           outline:none;
       }
+      .my-authenclass-content{
+        display: -webkit-flex;
 
+      }
+      button{
+        margin:auto;
+        width: 50%;
+      }
     </style>
 
 </head>
 <body>
-    <div style="display: table;margin-top:30px">
-        <div style="display:table-cell;vertical-align:middile;text-align:center;">
-        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Single">个人</button>
-        <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many0">高校</button>
-        </div>
 
-        <div style="display:table-cell;vertical-align:middile;text-align:center;">
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many1">院所</button>
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Many2">企业</button>
-        </div>
+    <div>
+        <button class="am-btn am-btn-primary" id="Single" style="display:block;margin-top:10px">个人</button>
+        <button class="am-btn am-btn-primary" id="Many" style="display:block;margin-top:10px">高校/院所/企业</button>
+        <button class="am-btn am-btn-primary" id="Group" style="display:block;margin-top:10px">团队</button>
 
-        <div style="display:table-cell;vertical-align:middile;text-align:center;">
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Group">团队</button>
-            <button class="am-btn am-btn-primary" style="margin-top:5px" id="Other">其他</button>
-        </div>
     </div>
+
 </body>
  <script>
      $(document).ready(function(){
@@ -40,7 +39,7 @@
             parent.close();
             window.top.location ="/login/AuthenSingle.html";
         })
-        $("#Many2").click(function(){
+        $("#Many").click(function(){
             window.top.location ="/login/AuthenMany.html";
         })
         $("#Group").click(function(){
