@@ -46,9 +46,6 @@
       .my-login-head{
         background-color: black;  
       }
-      body{
-        background-color: #E6E6E6;
-      }
       .my-authservice-content{
         display: -webkit-flex;
         display: flex;
@@ -62,6 +59,7 @@
           display: -webkit-flex;
           display: flex;
           flex-direction: column;
+
       }
 
 
@@ -72,12 +70,34 @@
         border-radius: 10px;
         width: 80%
     }
+
+    
     a {
         text-decoration: none;
         color:black;
     }
+    .my-authen-register{
+        display:-webkit-flex;
+        display: flex;
+        align-items:center;
+        justify-content:space-between;
 
+    }
 
+    li{
+
+        list-style: none;
+
+    }
+    ul{
+        padding-left:0;
+    }
+
+    .my-content > li{
+        border-bottom: 1px solid #e6e6e6;
+        line-height: 45px;
+        color:#e6e6e6;
+    }
   </style>
   <script>
       $(document).ready(function(){
@@ -148,10 +168,26 @@
     <div id="doc-oc-demo3" class="am-offcanvas">
         <div class="am-offcanvas-bar am-offcanvas-bar-flip">
           <div class="am-offcanvas-content" style="color:black">
-            <p id="single">个人</p>
-            <p id="many">高校/院所/企业</p>
-            <p id="group">团队</p>
-            <p id="all">全部</p>
+
+            <ul class="my-content">
+                <li>全部</li>
+                <li>交通|运输|物流|仓储</li>
+                <li>IT|通信|电子|互联网</li>
+                <li>房地产|建筑业</li>
+                <li>金融业</li>
+                <li>贸易|批发|零售|租赁业</li>
+                <li>文体教育|工艺美术</li>
+                <li>文化|传媒|娱乐|体育</li>
+                <li>生产|加工|制造</li>
+                <li>能源|矿产|环保</li>
+                <li>农|林|牧|渔|其他</li>
+                <li>服务业</li>
+            </ul>
+
+            <p id="single" style="border-bottom:1px solid black">个人</p>
+            <p id="many" style="border-bottom:1px solid black">高校/院所/企业</p>
+            <p id="group" style="border-bottom:1px solid black">团队</p>
+            <p id="all" style="border-bottom:1px solid black">全部</p>
           </div>
         </div>
       </div>
@@ -161,7 +197,7 @@
 
 
 
-<div data-am-widget="slider" class="am-slider am-slider-c2" style="margin:2px 0 10px 0" data-am-slider='{&quot;directionNav&quot;:false}' >
+<div data-am-widget="slider" class="am-slider am-slider-c2"  data-am-slider='{&quot;directionNav&quot;:false}' >
     <ul class="am-slides">
         <li>
             <img src="/assets/picture/home01.jpg" >
@@ -178,9 +214,9 @@
     </ul>
 </div>
 
-<div style="background-color:white;margin:10px 0 10px 0">
-        <p style="padding:5px;font-size:18px;display:inline">立即认证，让更多人了解你！</p> 
-        <span class="am-icon-angle-right" style="float:right;padding-right:5px"></span>   
+<div style="background-color:white;border-top:10px solid #e6e6e6;border-bottom:10px solid #e6e6e6" class="my-authen-register">
+        <p style="font-size:20px;margin:0">立即认证，让更多人了解你！</p> 
+        <span class="am-icon-angle-right " style="float:right;padding-right:5px"></span>   
 </div>    
 
 <div class="many" >
@@ -198,7 +234,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
             </div>
         </div>
-
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -213,6 +249,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
                 </div>
             </div>
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -227,7 +264,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
             </div>
-
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -242,6 +279,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -256,6 +294,22 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>many</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:14px;">地表最强</span>
+                <span style="font-size:14px;padding:0;display:block;">粉丝：<span style="font-size:14px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
+            </div>
+        </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -270,20 +324,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
-        <div class="my-authservice-content">
-            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
-
-            <div class="my-authservice-content-plot">
-                <span>many</span>
-                <div style="align-self:flex-end">
-                <span style="font-size:10px;">地表最强</span>
-                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
-                </div>
-            </div>
-            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
-            </div>
-        </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
 
 </div>
 
@@ -303,7 +344,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
             </div>
         </div>
-
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -318,7 +359,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
                 </div>
             </div>
-
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -333,7 +374,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
             </div>
-
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -348,6 +389,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -362,6 +404,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -376,6 +419,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -391,7 +435,7 @@
             </div>
         </div>
 
-
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
 </div>
 
 <div class="single" >
@@ -409,7 +453,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
             </div>
         </div>
-
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -424,7 +468,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
                 </div>
             </div>
-
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -439,7 +483,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
             </div>
-
+            <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
                 <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
@@ -454,6 +498,7 @@
                     <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -468,6 +513,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -482,6 +528,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
         <div class="my-authservice-content">
             <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
@@ -496,6 +543,7 @@
                 <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
+        <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
 
 </div>
 </body>

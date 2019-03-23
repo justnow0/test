@@ -10908,13 +10908,15 @@ ul.am-dropdown-content>.am-disabled>a:hover {
 
 .am-offcanvas-bar {
     position: fixed;
-    top: 0;
+    top: 49px;
     left: 0;
+    bottom:0;
     z-index: 1091;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 100%;
     max-width: 100%;
     background: white;
+    box-shadow:-1px 0px 13px #e6e6e6;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-transition: -webkit-transform .3s ease-in-out;
