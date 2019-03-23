@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+}
+.wrapper{
+    width:500px;
+    margin:100px auto;
+    border:1px solid #000;
+}
+.search{
+    padding:10px;   
+}
+.search_box{
+    width:200px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    padding:10px; 
+    vertical-align:middle;  
+}
+.search p{
+    display:inline-block; 
+    vertical-align:middle;
+    margin-left:10px;
+}
+.search p span{
+    padding:8px;
+    border-radius:4px;
+    color:orange;
+    cursor: pointer;
+}
+.search .active{
+    color:#fff;
+    background:orange;
+}
+.userList ul li{
+    padding:10px;
+    border-bottom:1px solid #ccc;
+    list-style:none;
+    overflow:hidden;
+}
+.userList ul li img{
+    float:left;
+    width:50px;
+    height:50px;
+}
+.userList ul li p {
+    margin-left:70px;
+}
+
+    </style>
+    <script>
+    
+    
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="search">
+            <input type="text" class = "search_box" placeholder = "请输入用户名">
+            <p>
+                <span sex = "m">Male</span>
+                <span sex = "f">Female</span>
+                <span sex = "a" class = "active">All</span>
+            </p>
+        </div>
+        <div class="userList">
+            <!-- 选项动态生成 -->
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+            </ul>
+        </div>
+     </div>
+
+     <script>
+/*渲染的数据*/
+var personArr = [
+    {name:'王飞',src:'3.png',des:'帅',sex:'m'},
+    {name:'李颖',src:'4.png',des:'美',sex:'f'},
+    {name:'王秀琴',src:'1.png',des:'漂亮',sex:'f'},
+    {name:'刘宝玲',src:'5.png',des:'温柔 飞',sex:'f'},
+    {name:'王虎',src:'2.png',des:'矮胖',sex:'m'},
+    {name:'田飞飞',src:'7.png',des:'善良',sex:'f'},
+    {name:'陈良宇',src:'6.png',des:'酷',sex:'m'},  
+]
+var oUl = document.getElementsByTagName('ul')[0],
+    OInput = document.getElementsByClassName('search_box')[0],
+    oP = document.getElementsByTagName('p')[0];
+
+/* Dom树渲染 每次触发事件，Dom树都要重新渲染一次*/
+function renderPage(list){
+    var str = '';
+    list.forEach((el,index)=> {
+        str += `<li>
+            <img src = "./img/`+ el.src + `">
+            <p>` + el.name + `</p>
+            <p>` + el.des + `</p>
+        </li>`
+    });
+    oUl.innerHTML = str
+}
+renderPage(personArr);
+
+/* 存储当前的状态：text即input中的内容 和 性别的选项 */
+var state = {
+    text:'',
+    sex:'a',
+}
+
+//根据input筛选内容
+OInput.oninput = function(){
+    state.text = this.value; //将input的内容存储到状态机中
+    renderPage(lastFilter())
+}
+//根据文字筛选
+function filterText(text,arr){
+    return arr.filter(function(ele,index){
+        return ele.name.indexOf(text) > -1
+    })
+}
+//根据点击span筛选性别
+oP.addEventListener('click',function(e){
+    if(e.target.nodeName == 'SPAN'){
+        state.sex = e.target.getAttribute('sex'); //将性别存储到状态机中
+        document.getElementsByClassName('active')[0].className = null;
+        e.target.className = 'active';
+        renderPage(lastFilter())
+    }
+},false)
+//根据性别筛选
+function filterSex(sex,arr){
+    if(sex == 'a'){
+        return arr
+    }else{
+        return arr.filter(function(ele,index){
+            return sex == ele.sex
+        })
+    }  
+}
+//合并 性别和input内容的选项
+function combineFilterFunc(obj,arr){
+    return function(){
+        var lastArr = arr;
+        for(prop in obj){
+            lastArr = obj[prop](state[prop],lastArr)
+        }
+        return lastArr
+    }
+}
+var lastFilter = combineFilterFunc({text:filterText,sex:filterSex},personArr)
+
+     </script>
+</body>
+</html>

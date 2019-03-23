@@ -37,7 +37,12 @@
   <script src="/assets/js/amazeui.min.js"></script>
   <link rel="stylesheet" href="/assets/css/amazeui.min.css">
   <link rel="stylesheet" href="/assets/css/app.css">
-  <style>
+
+
+    
+
+<style>
+    
       .my-login-head{
         background-color: black;  
       }
@@ -57,135 +62,439 @@
           display: -webkit-flex;
           display: flex;
           flex-direction: column;
-
-
-
       }
+
+
+      .my-AuthenSearch-search{
+        display:-webkit-flex;
+        display:flex;
+        align-items: center;
+        border-radius: 10px;
+        width: 80%
+    }
+    a {
+        text-decoration: none;
+        color:black;
+    }
+
+
   </style>
+  <script>
+      $(document).ready(function(){
+          $("#name").click(function(){
+              $(this).html("已关注");
+          })
+
+          $("#single").click(function(){
+             $(".single").show();
+             $(".many").hide();
+             $(".group").hide();
+             $("#doc-oc-demo3").offCanvas('close');
+          })
+          $("#many").click(function(){
+             $(".many").show();
+             $(".single").hide();
+             $(".group").hide();
+             $("#doc-oc-demo3").offCanvas('close');
+          })
+          $("#group").click(function(){
+             $(".group").show();
+             $(".single").hide();
+             $(".many").hide();
+             $("#doc-oc-demo3").offCanvas('close');
+          })
+          $("#all").click(function(){
+             $(".group").show();
+             $(".single").show();
+             $(".many").show();
+             $("#doc-oc-demo3").offCanvas('close');
+          })
+          
+      })
+
+      $(document).ready(function(){
+          $("#001").click(function(){
+              
+          })
+      })
+  
+  </script>
 </head>
 <body>
-<header data-am-widget="header" class="am-header am-header-default my-login-head">
+
+
+
+<header data-am-widget="header" class="am-header am-header-default my-login-head" >
     <div class="am-header-left am-header-nav">
         <a href="index.html" class="">
             <span class="am-icon-angle-left"></span>
         </a>
     </div>
     <span class="am-header-title" style="font-size:16px">认证专栏</span>
+
+    <div>
+
+
+    </div>
     <div class="am-header-right am-header-nav">
-        <a href="AuthenServiceSearch.html">
-            <span class="am-icon-search"></span>
+        <a href="AuthenServiceSearch.html" style="margin-right:10px">
+            <span class="am-header-icon am-icon-search"></span>
         </a>
 
+            <span class="am-header-icon am-icon-bars" data-am-offcanvas="{target: '#doc-oc-demo3'}"></span>
+ 
+        <!--侧边栏内容-->
+        <!-- 侧边栏内容 -->
+    <div id="doc-oc-demo3" class="am-offcanvas">
+        <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+          <div class="am-offcanvas-content" style="color:black">
+            <p id="single">个人</p>
+            <p id="many">高校/院所/企业</p>
+            <p id="group">团队</p>
+            <p id="all">全部</p>
+          </div>
+        </div>
+      </div>
     </div>
 </header>
 
-<div style="background-color:white;margin-top:10px;margin-bottom:10px">
-    <p style="padding:5px;font-size:16px;display:inline">立即认证，让更多人了解你！</p> 
-    <span class="am-icon-angle-right" style="float:right;padding-right:5px"></span>   
+
+
+
+<div data-am-widget="slider" class="am-slider am-slider-c2" style="margin:2px 0 10px 0" data-am-slider='{&quot;directionNav&quot;:false}' >
+    <ul class="am-slides">
+        <li>
+            <img src="/assets/picture/home01.jpg" >
+            <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
+        </li>
+        <li>
+            <img src="/assets/picture/home02.jpg" >
+            <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
+        </li>
+        <li>
+            <img src="/assets/picture/home03.jpg">
+            <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
+        </li>
+    </ul>
 </div>
 
-<div>
-        <div class="my-authservice-content">
-            <img src="/assets/picture/head1.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+<div style="background-color:white;margin:10px 0 10px 0">
+        <p style="padding:5px;font-size:18px;display:inline">立即认证，让更多人了解你！</p> 
+        <span class="am-icon-angle-right" style="float:right;padding-right:5px"></span>   
+</div>    
 
-            <div class="my-authservice-content-plot">
-                <span>周杰伦</span>
+<div class="many" >
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head1.jpg"  onclick="location.href='/login/MyhomePage.html'" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot" onclick="location.href='/login/MyhomePage.html'">
+                <span>想隐藏我</span>
                 <div style="align-self:flex-end">
-                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;">地表最强地表最强地表最强地表最强</span>
                 <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                 </div>
             </div>
-            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
             </div>
         </div>
-        </div>
+
         <div class="my-authservice-content">
-                <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+                <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
                 <div class="my-authservice-content-plot">
-                    <span>周杰伦</span>
+                    <span>many</span>
                     <div style="align-self:flex-end">
                     <span style="font-size:10px;">地表最强</span>
                     <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                     </div>
                 </div>
-                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
                 </div>
             </div>
-        </div>
         <div class="my-authservice-content">
-                <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+                <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
                 <div class="my-authservice-content-plot">
-                    <span>周杰伦</span>
+                    <span>many</span>
                     <div style="align-self:flex-end">
                     <span style="font-size:10px;">地表最强</span>
                     <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                     </div>
                 </div>
-                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
             </div>
-        </div>
+
         <div class="my-authservice-content">
-                <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+                <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
     
                 <div class="my-authservice-content-plot">
-                    <span>周杰伦</span>
+                    <span>many</span>
                     <div style="align-self:flex-end">
                     <span style="font-size:10px;">地表最强</span>
                     <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                     </div>
                 </div>
-                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
                 </div>
         </div>
         <div class="my-authservice-content">
-            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+            <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
             <div class="my-authservice-content-plot">
-                <span>周杰伦</span>
+                <span>many</span>
                 <div style="align-self:flex-end">
                 <span style="font-size:10px;">地表最强</span>
                 <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                 </div>
             </div>
-            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
             </div>
         </div>
         <div class="my-authservice-content">
-            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
             <div class="my-authservice-content-plot">
-                <span>周杰伦</span>
+                <span>many</span>
                 <div style="align-self:flex-end">
                 <span style="font-size:10px;">地表最强</span>
                 <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                 </div>
             </div>
-            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
         <div class="my-authservice-content">
-            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 40px" alt="" width="70px"  height="70px">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
 
             <div class="my-authservice-content-plot">
-                <span>周杰伦</span>
+                <span>many</span>
                 <div style="align-self:flex-end">
                 <span style="font-size:10px;">地表最强</span>
                 <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
                 </div>
             </div>
-            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:center">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white">+ 关注</span>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
             </div>
         </div>
+
+</div>
+
+
+<div class="group" >
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head1.jpg"  onclick="location.href='/login/MyhomePage.html'" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot" onclick="location.href='/login/MyhomePage.html'">
+                <span>group</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强地表最强地表最强地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
+            </div>
+        </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>group</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
+                </div>
+            </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>group</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+                </div>
+            </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>group</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+                </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>group</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+            </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>group</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
+            </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>group</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
+            </div>
+        </div>
+
+
+</div>
+
+<div class="single" >
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head1.jpg"  onclick="location.href='/login/MyhomePage.html'" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot" onclick="location.href='/login/MyhomePage.html'">
+                <span>single</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强地表最强地表最强地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
+            </div>
+        </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head2.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>single</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;">+ 关注</span>
+                </div>
+            </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head3.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>single</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+                </div>
+            </div>
+
+        <div class="my-authservice-content">
+                <img src="/assets/picture/head5.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+    
+                <div class="my-authservice-content-plot">
+                    <span>single</span>
+                    <div style="align-self:flex-end">
+                    <span style="font-size:10px;">地表最强</span>
+                    <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                    </div>
+                </div>
+                <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                    <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+                </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head6.jpeg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>single</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right: 10px">+ 关注</span>
+            </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>single</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
+            </div>
+        </div>
+        <div class="my-authservice-content">
+            <img src="/assets/picture/head4.jpg" style="display:inline;border-radius:35px;margin:5px 10px 5px 10px" alt="" width="70px"  height="70px">
+
+            <div class="my-authservice-content-plot">
+                <span>single</span>
+                <div style="align-self:flex-end">
+                <span style="font-size:10px;">地表最强</span>
+                <span style="font-size:10px;padding:0;display:block;">粉丝：<span style="font-size:10px">100000</span></span>
+                </div>
+            </div>
+            <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
+                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px">+ 关注</span>
+            </div>
         </div>
 
 </div>
