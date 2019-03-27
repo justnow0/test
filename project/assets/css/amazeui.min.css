@@ -10914,10 +10914,9 @@ ul.am-dropdown-content>.am-disabled>a:hover {
     bottom:0;
     z-index: 1091;
     width: 80%;
-    height: 100%;
     max-width: 100%;
     background: white;
-    box-shadow:-1px 0px 13px #e6e6e6;
+    box-shadow: -1px 0px 13px #e6e6e6;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-transition: -webkit-transform .3s ease-in-out;
@@ -10962,7 +10961,7 @@ ul.am-dropdown-content>.am-disabled>a:hover {
 }
 
 .am-offcanvas-content {
-    padding: 15px;
+    margin:15px;
     color: #999
 }
 

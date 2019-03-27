@@ -91,18 +91,24 @@
     }
     ul{
         padding-left:0;
+        margin-top:0;
     }
-
+    .my-content > ul{
+        padding-top:0;
+        margin-top:0;
+    }
     .my-content > li{
-        border: 1px solid #e6e6e6;
         line-height: 45px;
         color:black;
+        border-bottom:1px solid #e6e6e6;
     }
   </style>
   <script>
       $(document).ready(function(){
           $("#name").click(function(){
               $(this).html("已关注");
+              //设置多个属性。
+              $(this).css({"background-color":"black","color":"white"});
           })
 
           $("#single").click(function(){
@@ -111,18 +117,21 @@
              $(".group").hide();
              $("#doc-oc-demo3").offCanvas('close');
           })
+
           $("#many").click(function(){
              $(".many").show();
              $(".single").hide();
              $(".group").hide();
              $("#doc-oc-demo3").offCanvas('close');
           })
+
           $("#group").click(function(){
              $(".group").show();
              $(".single").hide();
              $(".many").hide();
              $("#doc-oc-demo3").offCanvas('close');
           })
+          
           $("#all").click(function(){
              $(".group").show();
              $(".single").show();
@@ -168,7 +177,8 @@
     <div id="doc-oc-demo3" class="am-offcanvas">
         <div class="am-offcanvas-bar am-offcanvas-bar-flip">
             <div class="am-offcanvas-content" style="color:black;">
-                <div class="am-form-group" style="margin-bottom:0;border-bottom:1px solid black">
+                <p style="margin-bottom:0;line-height:25px">请选择身份</p>
+                <div class="am-form-group" style="margin-bottom:50px;border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6">
                     <label class="am-radio-inline">
                         <input type="radio" value="" name="docInlineRadio"> 团队
                     </label>
@@ -179,9 +189,9 @@
                         <input type="radio" name="docInlineRadio"> 高校/团体/院校
                     </label>
                 </div>
-
+                <p style="margin-bottom:0;line-height:25px">请选择行业</p>
                 <ul class="my-content">
-                    <li>全部</li>
+                    <li style="border-top:1px solid #e6e6e6">全部</li>
                     <li>交通|运输|物流|仓储</li>
                     <li>IT|通信|电子|互联网</li>
                     <li>房地产|建筑业</li>
@@ -194,11 +204,6 @@
                     <li>农|林|牧|渔|其他</li>
                     <li>服务业</li>
                 </ul>
-
-                <div style="text-align:center">
-                    <button class="am-btn am-btn-primary" style="width:40%">重置</button>
-                    <button class="am-btn am-btn-primary" style="width:40%">确定</button>
-                </div>
             </div>
         </div>
     </div>
@@ -242,7 +247,7 @@
                 </div>
             </div>
             <div style="flex-grow:1;display: -webkit-flex;display:flex;justify-content:flex-end">
-                <span style="padding:5px;border-radius:5px;border:1px solid black;background-color:black;color:white;margin-right:10px;" id="name">+ 关注</span>
+                <span style="padding:5px;border-radius:5px;border:1px solid black;color:black;margin-right:10px;" id="name">+ 关注</span>
             </div>
         </div>
         <hr data-am-widget="divider" style="margin:0" class="am-divider am-divider-default" />
