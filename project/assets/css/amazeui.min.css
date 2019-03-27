@@ -10906,6 +10906,7 @@ ul.am-dropdown-content>.am-disabled>a:hover {
     transition: margin-left .3s ease-in-out
 }
 
+
 .am-offcanvas-bar {
     position: fixed;
     top: 49px;
@@ -10939,6 +10940,7 @@ ul.am-dropdown-content>.am-disabled>a:hover {
     width: 1px;
     background: white;
 }
+
 
 .am-offcanvas.am-active .am-offcanvas-bar.am-offcanvas-bar-active {
     -webkit-transform: translateX(0);
