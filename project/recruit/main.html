@@ -24,7 +24,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta name="apple-mobile-web-app-title" content="尽智研究院" />
 
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -32,48 +32,28 @@
     <meta name="msapplication-TileColor" content="#0e90d2">
 
 
+    <!--jquery要在前面加载-->
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/amazeui.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/amazeui.css">
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
 
     <style>
-        .my-index-homepicture {
-            padding: 0px 0px 20px 0px
-        }
-
-        .my-nav-footer {
-            background-color: #494949
-        }
-
-        .my-footer-ul a {
-            color: #FFF !important
-        }
-
-        .my-footer-ul li:hover {
-            background: #333333
-        }
-
-        .my-am-header {
-            background-color: white;
-            bottom: none
-        }
-
-        .my-am-button {
-            border-radius: 5px 5px 5px 5px;
-            background: black;
-            border: 1px solid #000;
-            font-size: 14px
-        }
-
-        .header {
-            display: flex;
+        .my-AuthenSearch-search {
             display: -webkit-flex;
-            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            width: 80%
         }
 
-        .top {
-            margin-top: 10px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .my-login-head {
+            background-color: black;
         }
 
         .kcfwcontent {
@@ -96,36 +76,32 @@
 
         }
 
-        .kcfwcontent .kcfwcontentbuy {
-            display: flex;
-            display: -webkit-flex;
-            flex-direction: row-reverse;
-            flex-basis: 90px;
-            line-height: 18px;
-            font-size: 12px;
-            color: red;
+        li {
+
+            list-style: none;
+
         }
 
-        .kcfwtitle {
-            font-size: 15px;
-            line-height: 18px;
+        ul {
+            padding-left: 0;
+            margin-top: 0;
         }
 
-        .kcfwcharge {
-            font-size: 12px;
-            margin-top: 20px;
+        .my-content>ul {
+            padding-top: 0;
+            margin-top: 0;
         }
 
-        .my-nav-footer {
-            background-color: #494949
+        .my-content>li {
+            line-height: 45px;
+            color: black;
         }
 
-        .my-footer-ul a {
-            color: #FFF !important
-        }
-
-        .my-footer-ul li:hover {
-            background: #333333
+        .my-am-button {
+            border-radius: 5px 5px 5px 5px;
+            background: black;
+            border: 1px solid #000;
+            font-size: 14px
         }
 
         .my-kcfw-push {
@@ -135,33 +111,81 @@
             z-index: 2000;
         }
     </style>
-    <script>
-        $(document).ready(function () {
-            $("#all").click(function () {
-                location.href = "kcfwall.html";
-            })
-            $("#search").click(function () {
-                location.href = "kcfwsearch.html";
-            })
-            $("#push").click(function () {
-                if ($("#content01").prop("className") == "am-active")
-                    location.href = "kcfwneed.html";
-                else
-                    location.href = "kcfwsolution.html";
-            })
-        })
-    </script>
+
+
 </head>
 
 <body>
+
+    <header data-am-widget="header" class="am-header am-header-default my-login-head">
+        <div class="am-header-left am-header-nav">
+            <a href="/index.html" class="">
+                <span class="am-icon-angle-left"></span>
+            </a>
+        </div>
+        <span class="am-header-title" style="font-size:16px">找工作</span>
+
+        <div>
+
+
+        </div>
+        <div class="am-header-right am-header-nav">
+            <a href="/recruit/search.html" style="margin-right:10px">
+                <span class="am-header-icon am-icon-search"></span>
+            </a>
+
+            <span class="am-header-icon am-icon-bars" data-am-offcanvas="{target: '#doc-oc-demo3'}"></span>
+
+            <!--侧边栏内容-->
+            <!-- 侧边栏内容 -->
+            <div id="doc-oc-demo3" class="am-offcanvas">
+                <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+                    <div class="am-offcanvas-content" style="color:black;">
+                        <p style="margin-bottom:0;line-height:25px">请选择行业</p>
+                        <ul class="my-content">
+                            <li style="border-top:1px solid #e6e6e6">全部</li>
+                            <li>交通|运输|物流|仓储</li>
+                            <li>IT|通信|电子|互联网</li>
+                            <li>房地产|建筑业</li>
+                            <li>金融业</li>
+                            <li>贸易|批发|零售|租赁业</li>
+                            <li>文体教育|工艺美术</li>
+                            <li>文化|传媒|娱乐|体育</li>
+                            <li>生产|加工|制造</li>
+                            <li>能源|矿产|环保</li>
+                            <li>农|林|牧|渔|其他</li>
+                            <li>服务业</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{&quot;directionNav&quot;:false}'>
+        <ul class="am-slides">
+            <li>
+                <img src="/assets/picture/home01.jpg" class="my-home-slider">
+                <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
+            </li>
+            <li>
+                <img src="/assets/picture/home02.jpg" class="my-home-slider">
+                <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
+            </li>
+            <li>
+                <img src="/assets/picture/home03.jpg" class="my-home-slider">
+                <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
+            </li>
+        </ul>
+    </div>
+
     <div data-am-widget="tabs" class="am-tabs am-tabs-default">
         <ul class="am-tabs-nav am-cf" style="background:white">
-            <li><i class="am-icon-bars am-icon-md" id="all"></i></li>
-            <li class="am-active" id="content01"><a href="[data-tab-panel-0]">需求/求助</a></li>
-            <li class=""><a href="[data-tab-panel-1]">方案/服务</a></li>
-            <li><span class="am-icon-search am-icon-md" id="search"></span></li>
+            <li class="am-active" id="content01"><a href="[data-tab-panel-0]">全职招聘</a></li>
+            <li class=""><a href="[data-tab-panel-1]">实习兼职</a></li>
+
         </ul>
-        <img src="/assets/picture/home01.jpg" alt="" width="100%" style="margin-top:5px;">
+
+
         <div class="am-tabs-bd" style="border:none">
             <div data-tab-panel-0 class="am-tab-panel am-active" id="content">
                 <div class="kcfwcontent">
@@ -244,10 +268,6 @@
     <div class="my-kcfw-push">
         <p><img src="/assets/picture/push.png" alt="" width="15%" class="my-kcfw-push" id="push"></span></p>
     </div>
-    <script src="/assets/js/jquery.min.js"></script>
-    <!--<![endif]-->
-    <script src="/assets/js/amazeui.min.js"></script>
-
 </body>
 
 </html>

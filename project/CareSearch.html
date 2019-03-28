@@ -50,22 +50,71 @@
         text-decoration: none;
         color:black;
     }
+    .my-login-head{
+        background-color: black;  
+      }
   </style>
 
 
 </head>
 <body>
 
-    <div class="am-g" style="padding-left:10px;margin-top:20px">
-        <div style="background-color:#E6E6E6;" class="my-AuthenSearch-search am-u-sm-10" style="padding:0;margin-left:5px;text-align: center" >
-        <span class="am-icon-search"></span>
-        <input type="text" placeholder="输入你要搜索的内容" style="border:none;background-color:#E6E6E6;width: 100%;padding:0;outline:none">
-        </div>
-        <div class="am-u-sm-2" >
-            <a href="CarefulSelection.html">取消</a>
-        </div>
-    </div>
-
+        <header data-am-widget="header" class="am-header am-header-default my-login-head" >
+                <div class="am-header-left am-header-nav">
+                    <a href="index.html" class="">
+                        <span class="am-icon-angle-left"></span>
+                    </a>
+                </div>
+                <span class="am-header-title" style="font-size:16px">认证专栏</span>
+            
+                <div>
+            
+            
+                </div>
+                <div class="am-header-right am-header-nav">
+                    <a href="AuthenServiceSearch.html" style="margin-right:10px">
+                        <span class="am-header-icon am-icon-search"></span>
+                    </a>
+            
+                        <span class="am-header-icon am-icon-bars" data-am-offcanvas="{target: '#doc-oc-demo3'}"></span>
+             
+                    <!--侧边栏内容-->
+                    <!-- 侧边栏内容 -->
+                <div id="doc-oc-demo3" class="am-offcanvas">
+                    <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+                        <div class="am-offcanvas-content" style="color:black;">
+                            <p style="margin-bottom:0;line-height:25px">请选择身份</p>
+                            <div class="am-form-group" style="margin-bottom:50px;border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6">
+                                <label class="am-radio-inline">
+                                    <input type="radio" value="" name="docInlineRadio"> 团队
+                                </label>
+                                <label class="am-radio-inline">
+                                    <input type="radio" name="docInlineRadio"> 个人
+                                </label>
+                                <label class="am-radio-inline">
+                                    <input type="radio" name="docInlineRadio"> 高校/团体/院校
+                                </label>
+                            </div>
+                            <p style="margin-bottom:0;line-height:25px">请选择行业</p>
+                            <ul class="my-content">
+                                <li style="border-top:1px solid #e6e6e6">全部</li>
+                                <li>交通|运输|物流|仓储</li>
+                                <li>IT|通信|电子|互联网</li>
+                                <li>房地产|建筑业</li>
+                                <li>金融业</li>
+                                <li>贸易|批发|零售|租赁业</li>
+                                <li>文体教育|工艺美术</li>
+                                <li>文化|传媒|娱乐|体育</li>
+                                <li>生产|加工|制造</li>
+                                <li>能源|矿产|环保</li>
+                                <li>农|林|牧|渔|其他</li>
+                                <li>服务业</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </header>
 
 
 

@@ -1,0 +1,536 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>尽智研究院</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="尽智研究院" />
+
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+
+    <!--jquery要在前面加载-->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/amazeui.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/aui/css/aui.2.0.css">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <style>
+        .my-login-head {
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        ul {
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .my-content>ul {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .my-content>li {
+            line-height: 45px;
+            color: black;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .my-order-head {
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .alink {
+            display: -webkit-flex;
+            display: flex;
+            margin-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: .5px solid #f5f5f5;
+
+        }
+
+        .alink .article {
+            -webkit-box-flex: 1;
+            flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
+        .alink .article .article-title {
+            font-family: PingFangSC-Medium;
+            display: block;
+            -webkit-box-flex: 1;
+            flex: 1;
+            overflow: hidden;
+            line-height: 21px;
+            font-size: 15px;
+            color: #27292e;
+        }
+
+        .alink .article .article-marke {
+            margin: 0;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #9da0a5;
+        }
+
+        .alink .article-picture {
+            width: 110px;
+            height: 90px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header data-am-widget="header" class="am-header am-header-default my-login-head">
+        <div class="am-header-left am-header-nav">
+            <a href="/index.html" class="">
+                <span class="am-icon-angle-left"></span>
+            </a>
+        </div>
+        <span class="am-header-title" style="font-size:16px">行业动态</span>
+
+        <div class="am-header-right am-header-nav">
+            <a href="/industrynews/search.html" style="margin-right:10px">
+                <span class="am-header-icon am-icon-search"></span>
+            </a>
+
+            <span class="am-header-icon am-icon-bars" data-am-offcanvas="{target: '#doc-oc-demo3'}"></span>
+
+            <!--侧边栏内容-->
+            <!-- 侧边栏内容 -->
+            <div id="doc-oc-demo3" class="am-offcanvas">
+                <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+                    <div class="am-offcanvas-content" style="color:black;">
+                        <p style="margin-bottom:0;line-height:25px">请选择行业</p>
+                        <ul class="my-content">
+                            <li style="border-top:1px solid #e6e6e6">全部</li>
+                            <li>交通|运输|物流|仓储</li>
+                            <li>IT|通信|电子|互联网</li>
+                            <li>房地产|建筑业</li>
+                            <li>金融业</li>
+                            <li>贸易|批发|零售|租赁业</li>
+                            <li>文体教育|工艺美术</li>
+                            <li>文化|传媒|娱乐|体育</li>
+                            <li>生产|加工|制造</li>
+                            <li>能源|矿产|环保</li>
+                            <li>农|林|牧|渔|其他</li>
+                            <li>服务业</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title my-order-head">
+            <li class="layui-this">咨询</li>
+            <li>科研成果</li>
+            <li>应用产品</li>
+            <li>赛事会议</li>
+        </ul>
+        <div data-am-widget="slider" class="am-slider am-slider-c2" data-am-slider='{&quot;directionNav&quot;:false}'>
+            <ul class="am-slides">
+                <li>
+                    <img src="/assets/picture/home01.jpg">
+                    <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
+                </li>
+                <li>
+                    <img src="/assets/picture/home02.jpg">
+                    <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
+                </li>
+                <li>
+                    <img src="/assets/picture/home03.jpg">
+                    <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <ul>
+
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="layui-tab-item layui">
+                页面二
+                <ul>
+
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="layui-tab-item layui">
+                页面三
+                <ul>
+
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="layui-tab-item layui">
+                页面四
+                <ul>
+
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="/article/careselect/1.html" class="alink">
+                            <div class="article">
+                                <span class="article-title" style="height:74px">东方微银完成千万级美元B轮融资 Ventech China领投</span>
+                                <p class="article-marke">
+                                    <span>创新公司</span>
+                                    <span class="am-icon-comment">20</span>
+                                </p>
+                            </div>
+                            <div class="article-picture">
+                                <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="/assets/layui/layui.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
+</body>
+</html>

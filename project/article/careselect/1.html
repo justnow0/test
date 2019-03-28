@@ -62,7 +62,7 @@
           width: 100%;
           background-color: white;
           box-shadow: 0 0 13px rgba(35, 31, 15, 0.32);
-
+          padding:0 10px 0 10px
       }
   </style>
 
@@ -107,13 +107,40 @@
                 Namespaces are one honking great idea -- let's do more of those!</p>
     </div>
 
+
+
     <!--底部固定内容-->
     <div class="my-post-bottom" >
-        <span class="am-icon-angle-left"></span>
+        <span class="am-icon-angle-left" onclick="javascript :history.back(-1);"></span>
+        <div>
         <span class="am-icon-heart-o"></span>
+        <span>100</span>
+        </div>
+        <div style="display:-webkit-flex;display:flex;align-items:center;">
+        <img src="/assets/picture/zan.png" alt="" width="20px" height="20px">
+        <span>100</span>
+        </div>
+        <div>
+        <span class="am-icon-comment-o"></span>
+        <span>100</span>
+        </div>
+        <span class="am-icon-mail-forward" data-am-modal="{target: '#my-actions'}"></span>
     </div>
 
-
+    <div class="am-modal-actions" id="my-actions">
+            <div class="am-modal-actions-group">
+              <ul class="am-list">
+                <li class="am-modal-actions-header">...</li>
+                <li><a href="#"><span class="am-icon-wechat"></span> ...</a></li>
+                <li class="am-modal-actions-danger">
+                  <a href="#"><i class="am-icon-twitter"></i> ...</a>
+                </li>
+              </ul>
+            </div>
+            <div class="am-modal-actions-group">
+              <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+            </div>
+    </div>
 
 
 </body>
