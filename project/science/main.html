@@ -15,29 +15,28 @@
     <!-- No Baidu Siteapp-->
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-
-
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
 
     <meta name="msapplication-TileColor" content="#0e90d2">
 
-
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/amazeui.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/amazeui.css">
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
 
     <style>
+        .my-login-head {
+            background-color: black;
+        }
+
         .my-index-homepicture {
             padding: 0px 0px 20px 0px
         }
@@ -134,6 +133,34 @@
             right: 10%;
             z-index: 2000;
         }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        ul {
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .my-content>ul {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .my-content>li {
+            line-height: 45px;
+            color: black;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .my-science-head {
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -144,7 +171,7 @@
                 location.href = "kcfwsearch.html";
             })
             $("#push").click(function () {
-                if ($("#content01").prop("className") == "am-active")
+                if ($("#content01").prop("className") == "layui-this")
                     location.href = "kcfwneed.html";
                 else
                     location.href = "kcfwsolution.html";
@@ -154,14 +181,118 @@
 </head>
 
 <body>
+    <header data-am-widget="header" class="am-header am-header-default my-login-head">
+        <div class="am-header-left am-header-nav">
+            <a href="/index.html" class="">
+                <span class="am-icon-angle-left"></span>
+            </a>
+        </div>
+        <span class="am-header-title" style="font-size:16px">科创服务</span>
+        <div class="am-header-right am-header-nav">
+            <a href="/science/search.html" style="margin-right:10px">
+                <span class="am-header-icon am-icon-search"></span>
+            </a>
+            <span class="am-header-icon am-icon-bars" data-am-offcanvas="{target: '#doc-oc-demo3'}"></span>
+
+            <!--侧边栏内容-->
+            <!-- 侧边栏内容 -->
+            <div id="doc-oc-demo3" class="am-offcanvas">
+                <div class="am-offcanvas-bar am-offcanvas-bar-flip">
+                    <div class="am-offcanvas-content" style="color:black;">
+                        <p style="margin-bottom:0;line-height:25px">请选择行业</p>
+                        <ul class="my-content">
+                            <li style="border-top:1px solid #e6e6e6">全部</li>
+                            <li>交通|运输|物流|仓储</li>
+                            <li>IT|通信|电子|互联网</li>
+                            <li>房地产|建筑业</li>
+                            <li>金融业</li>
+                            <li>贸易|批发|零售|租赁业</li>
+                            <li>文体教育|工艺美术</li>
+                            <li>文化|传媒|娱乐|体育</li>
+                            <li>生产|加工|制造</li>
+                            <li>能源|矿产|环保</li>
+                            <li>农|林|牧|渔|其他</li>
+                            <li>服务业</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <img src="/assets/picture/home01.jpg" alt="" width="100%">
+
+
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title my-science-head">
+            <li class="layui-this" id="content01">需求/求助</li>
+            <li>方案/服务</li>
+        </ul>
+
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                页面一
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                页面二
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
     <div data-am-widget="tabs" class="am-tabs am-tabs-default">
-        <ul class="am-tabs-nav am-cf" style="background:white">
-            <li><i class="am-icon-bars am-icon-md" id="all"></i></li>
+        <ul class="am-tabs-nav am-cf">
             <li class="am-active" id="content01"><a href="[data-tab-panel-0]">需求/求助</a></li>
             <li class=""><a href="[data-tab-panel-1]">方案/服务</a></li>
-            <li><span class="am-icon-search am-icon-md" id="search"></span></li>
         </ul>
-        <img src="/assets/picture/home01.jpg" alt="" width="100%" style="margin-top:5px;">
         <div class="am-tabs-bd" style="border:none">
             <div data-tab-panel-0 class="am-tab-panel am-active" id="content">
                 <div class="kcfwcontent">
@@ -183,7 +314,6 @@
             </div>
             <div data-tab-panel-1 class="am-tab-panel " id="content">
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年</span>
@@ -193,7 +323,6 @@
                 </div>
 
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年爱舒服撒舒服撒的</span>
@@ -203,7 +332,6 @@
                 </div>
 
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年</span>
@@ -212,7 +340,6 @@
                     </div>
                 </div>
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年</span>
@@ -221,7 +348,6 @@
                     </div>
                 </div>
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年</span>
@@ -230,7 +356,6 @@
                     </div>
                 </div>
                 <div class="kcfwcontent">
-
                     <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
                     <div class="kcfwcontentdetail">
                         <span class="kcfwtitle">中国财政两千年</span>
@@ -241,13 +366,16 @@
             </div>
         </div>
     </div>
+    -->
     <div class="my-kcfw-push">
         <p><img src="/assets/picture/push.png" alt="" width="15%" class="my-kcfw-push" id="push"></span></p>
     </div>
-    <script src="/assets/js/jquery.min.js"></script>
-    <!--<![endif]-->
-    <script src="/assets/js/amazeui.min.js"></script>
-
+    <script src="/assets/layui/layui.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
 </body>
 
 </html>

@@ -4165,7 +4165,7 @@ body .layui-table-tips .layui-layer-content {
 .layui-tab-brief>.layui-tab-title .layui-this:after {
     border: none;
     border-radius: 0;
-    border-bottom: 2px solid #02bafe
+    border-bottom: 3px solid #02bafe
 }
 
 .layui-tab-brief[overflow]>.layui-tab-title .layui-this:after {

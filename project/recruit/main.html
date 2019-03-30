@@ -37,6 +37,7 @@
     <script src="/assets/js/amazeui.min.js"></script>
     <link rel="stylesheet" href="/assets/css/amazeui.min.css">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
 
     <style>
         .my-AuthenSearch-search {
@@ -110,6 +111,16 @@
             right: 10%;
             z-index: 2000;
         }
+        .my-science-head {
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-around;
+        }
+        .my-content > li{
+        line-height: 45px;
+        color:black;
+        border-bottom:1px solid #e6e6e6;
+    }
     </style>
 
 
@@ -177,15 +188,75 @@
             </li>
         </ul>
     </div>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title my-science-head">
+            <li class="layui-this" id="content01">全职招聘</li>
+            <li>实习兼职</li>
+        </ul>
 
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                页面一
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                页面二
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+                <div class="kcfwcontent">
+                    <img src="/assets/picture/article.jpg" alt="" width="110px" height="90px">
+                    <div class="kcfwcontentdetail">
+                        <span class="kcfwtitle">中国财政两千年</span>
+                        <span class="kcfwcharge">普通订购<span>￥48</span></span>
+                        <span style="color:red;font-size: 12px">会员订购<span style="font-size:12px">￥20</span></sapn>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
     <div data-am-widget="tabs" class="am-tabs am-tabs-default">
         <ul class="am-tabs-nav am-cf" style="background:white">
             <li class="am-active" id="content01"><a href="[data-tab-panel-0]">全职招聘</a></li>
             <li class=""><a href="[data-tab-panel-1]">实习兼职</a></li>
-
         </ul>
-
-
         <div class="am-tabs-bd" style="border:none">
             <div data-tab-panel-0 class="am-tab-panel am-active" id="content">
                 <div class="kcfwcontent">
@@ -265,9 +336,16 @@
             </div>
         </div>
     </div>
+    -->
     <div class="my-kcfw-push">
         <p><img src="/assets/picture/push.png" alt="" width="15%" class="my-kcfw-push" id="push"></span></p>
     </div>
+    <script src="/assets/layui/layui.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
 </body>
 
 </html>
